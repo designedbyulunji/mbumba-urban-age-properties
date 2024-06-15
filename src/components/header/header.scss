@@ -1,0 +1,113 @@
+@import "../../_variables.scss";
+
+/*
+    Header
+*/
+.urban-age-prop__header {
+	@include flex_mixin;
+	backdrop-filter: blur(20px);
+	background-color: $header_background;
+	border: 2px solid rgba(217, 217, 217, 0.25);
+
+	padding: 0 10%;
+
+	position: fixed;
+	top: 0;
+
+	transition: all 250ms ease;
+	width: 100%;
+
+	// &:hover {
+	// 	background-color: $background_color_accent;
+	// }
+}
+
+/*
+    Logo
+*/
+.urban-age-prop__logo-container {
+	height: 8rem;
+	width: auto;
+	margin: 1rem 0;
+}
+
+.urban-age-prop__logo {
+	height: 100%;
+	width: 100%;
+}
+
+/*
+    Nav_links-ul
+*/
+.nav-links__ul {
+	@include flex_mixin;
+	column-gap: 2rem;
+}
+
+/*
+    Nav_links-li
+*/
+.nav-links__li {
+	font-size: 1.4rem;
+}
+
+/*
+    Nav_links-anchor
+*/
+.nav-links__anchor {
+	color: $text_color_primary;
+}
+
+/*
+    Button
+*/
+.btn {
+	@include button_large;
+}
+
+/*
+    Bars
+*/
+.urban-age-prop-nav_bars-container {
+	height: 2.5rem;
+	width: auto;
+	display: none;
+
+	position: relative;
+}
+.urban-age-prop-nav_bars {
+	color: $border_color_primary;
+	height: 100%;
+	width: 100%;
+}
+
+/*
+    Header Media Quaries
+*/
+@media (max-width: 768px) {
+	.urban-age-prop__header {
+		padding: 0 5%;
+	}
+
+	.urban-age-prop__logo-container {
+		height: 6rem;
+		width: auto;
+		margin: 0.5rem 0;
+	}
+
+	.nav-links__ul {
+		@include flex_mixin($direction: row);
+		row-gap: 2rem;
+	}
+
+	.nav-links__li {
+		font-size: 1.4rem;
+	}
+
+	/*
+    Nav_links-anchor
+*/
+	.nav-links__anchor {
+		color: $text_color_primary;
+	}
+}

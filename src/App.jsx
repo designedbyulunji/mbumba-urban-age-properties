@@ -1,5 +1,11 @@
+import Header from "./components/header/Header";
+
 function App() {
-	return <div>Mbumba Urban Age Properties</div>;
+	return (
+		<>
+			<Header />
+		</>
+	);
 }
 
 export default App;
