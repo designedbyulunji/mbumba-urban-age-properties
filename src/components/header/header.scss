@@ -5,13 +5,14 @@
 */
 .urban-age-prop__header {
 	@include flex_mixin;
-	backdrop-filter: blur(20px);
+	backdrop-filter: blur(0.5rem);
 	background-color: $header_background;
 	border: 2px solid rgba(217, 217, 217, 0.25);
 
 	padding: 0 10%;
+	overflow: hidden;
 
-	position: fixed;
+	position: sticky;
 	top: 0;
 
 	transition: all 250ms ease;

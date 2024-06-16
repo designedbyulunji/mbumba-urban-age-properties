@@ -4,5 +4,196 @@
     urban-age-hero-section
 */
 .urban-age-prop__hero {
+	width: 100%;
+	padding: 0 10%;
+	margin-top: 1rem;
+
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: auto;
+	grid-template-areas: "urban-age-prop__hero-left urban-age-prop__hero-right";
+	column-gap: 0.5rem;
+}
+
+.urban-age-prop__hero-left,
+.urban-age-prop__hero-right {
+	background-color: $background_color_primary;
+	height: 100%;
+	width: 100%;
+}
+
+.urban-age-prop__hero-left {
+	border-radius: 1rem;
+	height: 80vh;
+	grid-area: urban-age-prop__hero-left;
+
+	background-image: url("../../assets/images/urban-age-properties-hero-image-main.jpg");
+	background-size: cover;
+	background-position: center;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.urban-age-prop__hero-right {
+	grid-area: urban-age-prop__hero-right;
+}
+
+/*
+    Hero-top-left
+*/
+.hero-left__top {
+	@include flex_mixin;
+	// background-color: $background_color_secondary;
+	margin: 0 5%;
+	padding: 1.5rem 0;
+}
+
+/*
+    Social-icons
+*/
+.urban-age-prop__hero-social-icons-container {
+	@include flex_mixin;
 	background-color: $background_color_accent;
+	backdrop-filter: blur(0.5rem);
+	border-radius: 2rem;
+}
+
+.urban-age-prop__hero-social-icons {
+	color: #f3de70;
+	cursor: pointer;
+	margin: 1rem;
+	height: 100%;
+	margin: 1rem 1.5rem;
+
+	transition: all 250ms ease;
+	transform: scale(2);
+
+	&:active {
+		transform: scale(1.5);
+	}
+}
+
+// location
+.urban-age-prop__hero-location {
+	@include flex_mixin;
+}
+
+.location__indicator-container {
+	background-color: $background_color_accent;
+	backdrop-filter: blur(0.5rem);
+	border-radius: 100%;
+	height: 3rem;
+	margin-right: 1rem;
+	width: 3rem;
+
+	position: relative;
+}
+
+.location__indicator {
+	background-color: #f3de70;
+	backdrop-filter: blur(0.5rem);
+	border-radius: 100%;
+	height: 1rem;
+	margin-right: 1rem;
+	width: 1rem;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: all 250ms ease;
+
+	animation: animateLocationIndicator infinite 1.5s;
+}
+
+// animate location indicator
+@keyframes animateLocationIndicator {
+	0% {
+		background-color: #f3de70;
+		transform: translate(-50%, -50%) scale(1);
+	}
+	50% {
+		background-color: $text_color_accent;
+		transform: translate(-50%, -50%) scale(1.1);
+		box-shadow: 0 0 10px 5px $background_color_primary;
+	}
+	100% {
+		background-color: #f3de70;
+		transform: translate(-50%, -50%) scale(1);
+	}
+}
+
+.location__name {
+	backdrop-filter: blur(0.5rem);
+	background-color: $background_color_accent;
+	border-radius: 2rem;
+	color: #f3de70;
+	font-weight: 600;
+	padding: 1rem 1.5rem;
+}
+
+/*
+    Hero-left-bottom
+*/
+
+.hero-left__bottom-container {
+	backdrop-filter: blur(0.5rem);
+	background-color: $background_color_accent;
+	border-radius: 1rem;
+	display: flex;
+	gap: 0.5rem;
+	margin: 2% 5%;
+}
+
+.urban-age-prop__quick-action-card {
+	background-color: transparent;
+	border-right: 1px solid $border_color_secondary;
+	cursor: pointer;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5rem;
+
+	width: 100%;
+	position: relative;
+	transition: all 250ms ease;
+
+	&:active {
+		transform: scale(0.99);
+	}
+}
+
+.quick-action-card--pricing {
+	border: none;
+}
+
+.quick-action__img {
+	height: 5rem;
+}
+
+.quick-action__up-right-arrow {
+	background-color: #f3de7080;
+	color: $text_color_accent;
+	font-size: 2rem;
+
+	position: absolute;
+	top: 10%;
+	right: 5%;
+
+	border-radius: 100%;
+}
+
+.quick-action__heading {
+	color: #f3de70;
+	font-weight: 500;
+}
+
+.quick-action__description {
+	color: $text_color_accent;
+	text-align: justify;
+	padding: 0.5rem;
+	font-weight: 400;
 }
