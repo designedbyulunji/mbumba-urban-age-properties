@@ -17,6 +17,8 @@
 
 	transition: all 250ms ease;
 	width: 100%;
+
+	z-index: 1;
 }
 
 /*
@@ -46,6 +48,7 @@
 */
 .nav-links__li {
 	font-size: 1.4rem;
+	font-weight: 500;
 }
 
 /*
@@ -57,6 +60,11 @@
 
 .nav-links__anchor {
 	color: $text_color_secondary;
+	transition: all 250ms ease;
+
+	&:hover {
+		color: $background_color_primary;
+	}
 }
 
 /*

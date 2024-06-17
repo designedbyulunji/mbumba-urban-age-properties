@@ -1,11 +1,14 @@
 import "./main.scss";
-import { FaInstagram } from "react-icons/fa";
+import { FaInstagram, FaSearch } from "react-icons/fa";
 import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import { CgFacebook } from "react-icons/cg";
 import UrbanAgePolygon from "../../assets/images/urban-age-properties-polygons--large.svg";
 import { GoArrowUpRight } from "react-icons/go";
+import { useState } from "react";
 
 function Main() {
+	const [input, setInput] = useState("");
+
 	return (
 		<main className="urban-age-prop__hero">
 			{/* urban-age-prop-hero_left-side */}
@@ -86,7 +89,70 @@ function Main() {
 				</div>
 			</div>
 			{/* urban-age-prop-hero__right */}
-			<div className="urban-age-prop__hero-right">right</div>
+			<div className="urban-age-prop__hero-right">
+				{/* urban-age-prop__hero-right--top-container */}
+				<div className="urban-age-prop__hero-right-heading-search">
+					{/* heading__two */}
+					<h2 className="urban-age__hero-right-heading">
+						Find your next <br />
+						Perfect place to live
+					</h2>
+					{/* search */}
+					{/* urban-age-prop-search_tab */}
+					<span className="search_container--hero-right">
+						<input
+							type="text"
+							value={input}
+							onChange={function (event) {
+								setInput(event.target.value);
+							}}
+							className="urban-age-prop-search_box--hero-right"
+						/>
+						<FaSearch className="urban-age-prop-search_icon--hero-right" />
+					</span>
+				</div>
+				{/* urban-age-prop__hero-right--middle-container */}
+				<div className="urban-age-prop__logo-caption-container">
+					<div className="temp-cont">
+						<img
+							src={UrbanAgePolygon}
+							className="urban-age-prop__logo--hero-right"
+						/>
+					</div>
+					<h2 className="urban-age-prop__hero-right-heading">
+						<span className="urban-age-prop__heading-large">
+							Mbumba
+						</span>
+						<br />
+						<span className="add-bg"> Urban Age </span> Properties
+					</h2>
+				</div>
+				{/* urban-age-prop__hero-right--bottom-container */}
+				<div className="urban-age-prop__stats">
+					<div className="stats stats--happy-customers">
+						<p>
+							10K+
+							<br />
+							<span>happy customers</span>
+						</p>
+					</div>
+					<div className="stats stats--property-collection">
+						<p>
+							150+
+							<br />
+							<span>property collection</span>
+						</p>
+					</div>
+					<div className="stats stats--experience">
+						<p>
+							5 years+
+							<br />
+							<span>Real Estate experience</span>
+						</p>
+					</div>
+					<GoArrowUpRight className="arrow-right-bottom" />
+				</div>
+			</div>
 		</main>
 	);
 }
