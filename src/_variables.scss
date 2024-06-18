@@ -43,6 +43,24 @@ $text_color_secondary: #6fa8dd;
 	}
 }
 
+@mixin button_small() {
+	background-color: $background_color_primary;
+	border-radius: 50px;
+	border: none;
+	color: $text_color_accent;
+	cursor: pointer;
+	font-weight: 500;
+	padding: 10px 40px;
+	transition: all 250ms ease;
+
+	&:hover {
+		color: $text_color_primary;
+	}
+	&:active {
+		transform: scale(0.99);
+	}
+}
+
 // Flex Mixin
 @mixin flex_mixin($justify: space-between, $align: center, $direction: row) {
 	display: flex;

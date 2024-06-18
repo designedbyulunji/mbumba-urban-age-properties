@@ -1,0 +1,54 @@
+@import "../../_variables.scss";
+
+// Footer
+.urban-age-prop__footer {
+	@include flex_mixin;
+	background-color: $background_color_accent;
+	padding: 0 10%;
+
+	width: 100%;
+	margin-top: 2rem;
+}
+
+.urban-age-prop__footer-copyright {
+	color: $text_color_primary;
+	font-size: 1.5rem;
+	font-weight: 400;
+}
+
+.urban-age-prop__hero-social-icons--footer {
+	color: $border_color_primary;
+	font-size: 2.5rem;
+	margin: 0 1rem;
+}
+
+@media (max-width: 768px) {
+	.urban-age-prop__footer {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		background-color: $background_color_accent;
+		padding: 5% 5%;
+
+		width: 100%;
+		margin-top: 2rem;
+	}
+
+	.urban-age-prop__footer-copyright-container {
+		margin: 1.5rem 0;
+	}
+
+	.urban-age-prop__footer-copyright {
+		text-align: center;
+	}
+
+	.urban-age-prop__hero-social-icons-container-footer {
+		margin-top: 1.5rem;
+	}
+
+	.urban-age-prop__hero-social-icons--footer {
+		color: $border_color_primary;
+		font-size: 2.5rem;
+		margin: 0 1rem;
+	}
+}

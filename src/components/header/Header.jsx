@@ -64,6 +64,7 @@ function Header() {
 			<span className="urban-age-prop-search_container">
 				<input
 					type="text"
+					name="seacrh-input-main"
 					value={input}
 					onChange={function (event) {
 						setInput(event.target.value);

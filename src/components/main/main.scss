@@ -6,7 +6,7 @@
 .urban-age-prop__hero {
 	width: 100%;
 	padding: 0 10%;
-	margin-top: 1rem;
+	margin-top: 2rem;
 
 	display: grid;
 	grid-template-columns: 50% 50%;
@@ -48,6 +48,12 @@
 /*
     Hero-top-left
 */
+
+// small screen add
+.urban-age-prop__hero-right-heading-small {
+	display: none;
+}
+
 .hero-left__top {
 	@include flex_mixin;
 	// background-color: $background_color_secondary;
@@ -310,6 +316,10 @@
 	margin-bottom: 2%;
 }
 
+.btn--stats {
+	display: none;
+}
+
 .stats {
 	background-color: #fff4b1;
 	padding: 1rem;
@@ -352,4 +362,214 @@
 
 	justify-self: end;
 	align-self: center;
+
+	cursor: pointer;
+	transition: all 250ms ease;
+
+	&:active {
+		transform: scale(0.99);
+	}
+}
+
+@media (max-width: 768px) {
+	/*
+    urban-age-hero-section
+*/
+	.urban-age-prop__hero {
+		width: 100%;
+		padding: 0 5%;
+		margin-top: 2rem;
+
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: repeat(4fr, minmax(0, auto));
+		grid-template-areas:
+			"urban-age-prop__hero-right-heading"
+			"urban-age-prop__hero-left"
+			"urban-age-prop__hero-right";
+		// column-gap: 0.5rem;
+	}
+
+	// small screen add
+	.urban-age-prop__hero-right-heading-small {
+		grid-area: urban-age-prop__hero-right-heading;
+
+		border-left: 1px solid $border_color_accent;
+		display: inline-block;
+		margin: 0.5rem 0;
+		padding-left: 2.5%;
+	}
+
+	// left hero
+	.urban-age-prop__hero-left {
+		border-radius: 0.5rem;
+		height: 50vh;
+		grid-area: urban-age-prop__hero-left;
+
+		background-image: url("../../assets/images/urban-age-properties-hero-image-main.jpg");
+		background-size: cover;
+		background-position: center;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.hero-left__top {
+		@include flex_mixin($direction: column);
+		margin: 0 2.5%;
+		padding: 1.5rem 0;
+	}
+
+	/*
+		Social-icons
+	*/
+	.urban-age-prop__hero-social-icons-container {
+		display: none;
+	}
+	// location
+	.urban-age-prop__hero-location {
+		@include flex_mixin($direction: column);
+	}
+
+	.location__name {
+		margin-top: 2rem;
+	}
+
+	.hero-left__bottom-container {
+		display: none;
+	}
+
+	.urban-age-prop__hero-right {
+		grid-area: urban-age-prop__hero-right;
+		padding-left: 0rem;
+	}
+
+	// Hero right
+	.urban-age-prop__hero-right-heading-search {
+		display: none;
+	}
+
+	// Hero right middle container
+	.urban-age-prop__logo-caption-container {
+		display: flex;
+		align-items: center;
+
+		margin: 2rem 0;
+	}
+
+	.temp-cont {
+		height: 10rem;
+		// width: 100%;
+	}
+
+	.urban-age-prop__logo--hero-right {
+		height: 100%;
+	}
+
+	.urban-age-prop__hero-right-heading {
+		color: $text_color_primary;
+		font-family: perpetua;
+		width: 100%;
+		font-size: 2rem;
+
+		padding-left: 2rem;
+	}
+
+	.urban-age-prop__heading-large {
+		font-family: perpetua;
+		font-size: 5rem;
+	}
+
+	.add-bg {
+		border-radius: 32rem;
+		color: #141517;
+		font-family: perpetua;
+		font-size: 2rem;
+		margin-right: 0.5rem;
+		padding: 0.5rem 1rem;
+
+		position: relative;
+
+		&::before {
+			background-color: rgba(220, 168, 94, 0.6);
+			border-radius: 2rem;
+			filter: blur(0.5rem);
+			content: "";
+			height: 100%;
+			width: 100%;
+			position: absolute;
+
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: -1;
+		}
+	}
+
+	// Right bottom
+	.urban-age-prop__stats {
+		grid-template-rows: repeat(3fr, minmax(0, auto));
+		grid-template-columns: repeat(3fr, minmax(0, auto));
+		grid-template-areas:
+			"btn--stats btn--stats btn--stats"
+			"stats--happy-customers stats--property-collection stats--experience"
+			"arrow-right-bottom arrow-right-bottom arrow-right-bottom";
+
+		gap: 1rem 0.5rem;
+
+		margin-bottom: 2%;
+	}
+
+	.btn--stats {
+		grid-area: btn--stats;
+		display: inline-block;
+
+		justify-self: center;
+		align-self: center;
+	}
+
+	.stats {
+		background-color: #fff4b1;
+		padding: 0.5rem;
+		border-radius: 0.5rem;
+
+		p {
+			color: $text_color_primary;
+			font-size: 1.5rem;
+			font-weight: 600;
+		}
+
+		span {
+			color: $text_color_secondary;
+			font-size: 1.2rem;
+			font-weight: 300;
+		}
+	}
+
+	.stats--happy-customers {
+		grid-area: stats--happy-customers;
+	}
+
+	.stats--property-collection {
+		grid-area: stats--property-collection;
+		background-color: #f3de70;
+	}
+
+	.stats--experience {
+		grid-area: stats--experience;
+	}
+
+	.arrow-right-bottom {
+		grid-area: arrow-right-bottom;
+
+		background-color: #f3de70;
+		color: $text_color_accent;
+		font-size: 2.5rem;
+
+		border-radius: 100%;
+
+		justify-self: end;
+		align-self: center;
+	}
 }

@@ -74,6 +74,11 @@
 	@include button_large;
 }
 
+@media (max-width: 768px) {
+	.btn {
+		@include button_small;
+	}
+}
 /*
     Bars
 */

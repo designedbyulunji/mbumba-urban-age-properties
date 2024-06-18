@@ -11,6 +11,16 @@ function Main() {
 
 	return (
 		<main className="urban-age-prop__hero">
+			{/* Small screen add */}
+			<div className="urban-age-prop__hero-right-heading-small">
+				{/* heading__two */}
+				<h2 className="urban-age__hero-right-heading">
+					Find your next <br />
+					Perfect place to live
+				</h2>
+			</div>
+
+			{/* small screen add end */}
 			{/* urban-age-prop-hero_left-side */}
 			<div className="urban-age-prop__hero-left">
 				{/* hero-left-top */}
@@ -102,6 +112,7 @@ function Main() {
 					<span className="search_container--hero-right">
 						<input
 							type="text"
+							name="seacrh-input-main"
 							value={input}
 							onChange={function (event) {
 								setInput(event.target.value);
@@ -129,23 +140,25 @@ function Main() {
 				</div>
 				{/* urban-age-prop__hero-right--bottom-container */}
 				<div className="urban-age-prop__stats">
+					{/* urban-age-prop-action_btn */}
+					<button className="btn btn--stats">Get in touch</button>
 					<div className="stats stats--happy-customers">
 						<p>
-							10K+
+							10K&#43;
 							<br />
 							<span>happy customers</span>
 						</p>
 					</div>
 					<div className="stats stats--property-collection">
 						<p>
-							150+
+							150&#43;
 							<br />
 							<span>property collection</span>
 						</p>
 					</div>
 					<div className="stats stats--experience">
 						<p>
-							5 years+
+							5 years&#43;
 							<br />
 							<span>Real Estate experience</span>
 						</p>
