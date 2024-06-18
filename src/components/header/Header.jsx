@@ -15,7 +15,7 @@ function Header() {
 	];
 
 	const [toggled, setToggleIcon] = useState(false);
-	const [input, setInput] = useState("");
+	// const [input, setInput] = useState("");
 
 	function handleNavToggle() {
 		if (toggled === false) {
@@ -26,7 +26,13 @@ function Header() {
 	}
 
 	return (
-		<header className="urban-age-prop__header">
+		<header
+			className={
+				toggled
+					? "urban-age-prop__header active"
+					: "urban-age-prop__header"
+			}
+		>
 			{/* urban-age-prop-logo */}
 			<div className="urban-age-prop__logo-container">
 				<img
@@ -62,7 +68,7 @@ function Header() {
 			</nav>
 			{/* urban-age-prop-search_tab */}
 			<span className="urban-age-prop-search_container">
-				<input
+				{/* <input
 					type="text"
 					name="seacrh-input-main"
 					value={input}
@@ -70,7 +76,7 @@ function Header() {
 						setInput(event.target.value);
 					}}
 					className="urban-age-prop-search_box"
-				/>
+				/> */}
 				<FaSearch className="urban-age-prop-search_icon" />
 			</span>
 			{/* urban-age-prop-action_btn */}

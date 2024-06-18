@@ -42,6 +42,8 @@ function Main() {
 						<span className="location__name">
 							Area 2, Katoto, Mzuzu
 						</span>
+						{/* urban-age-prop-action_btn */}
+						<button className="btn btn--stats">Get in touch</button>
 					</div>
 				</div>
 				{/* hero-left-bottom */}
@@ -141,7 +143,7 @@ function Main() {
 				{/* urban-age-prop__hero-right--bottom-container */}
 				<div className="urban-age-prop__stats">
 					{/* urban-age-prop-action_btn */}
-					<button className="btn btn--stats">Get in touch</button>
+					{/* <button className="btn btn--stats">Get in touch</button> */}
 					<div className="stats stats--happy-customers">
 						<p>
 							10K&#43;

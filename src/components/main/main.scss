@@ -434,6 +434,7 @@
 
 	.location__name {
 		margin-top: 2rem;
+		// display: none;
 	}
 
 	.hero-left__bottom-container {
@@ -522,11 +523,12 @@
 	}
 
 	.btn--stats {
-		grid-area: btn--stats;
+		// grid-area: btn--stats;
+		margin-top: 1.5rem;
 		display: inline-block;
 
-		justify-self: center;
-		align-self: center;
+		// justify-self: center;
+		// align-self: center;
 	}
 
 	.stats {
